@@ -1,0 +1,146 @@
+.home-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #000000;
+}
+
+.movie-grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  transform: perspective(800px) rotateX(45deg) translateY(-200px);
+  transform-origin: center center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-movie-poster {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 50px;
+  z-index: 10;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.lets-watch-btn {
+  background: linear-gradient(135deg, #7dd3fc 0%, #5a67d8 100%);
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(90, 103, 216, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.lets-watch-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.lets-watch-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(90, 103, 216, 0.7);
+}
+
+.lets-watch-text-top {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.lets-watch-text-bottom {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movie-grid-background {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    transform: perspective(600px) rotateX(50deg) translateY(-150px);
+  }
+
+  .home-overlay {
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lets-watch-btn {
+    padding: 15px 40px;
+  }
+
+  .lets-watch-text-top {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .lets-watch-text-bottom {
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+  }
+}
