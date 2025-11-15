@@ -1,0 +1,144 @@
+.search-page {
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+.search-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.search-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-form {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.search-input-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #5a67d8;
+  box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.search-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #5a67d8 0%, #4c51bf 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(90, 103, 216, 0.4);
+}
+
+.search-filters {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.filter-label input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #5a67d8;
+}
+
+.filter-label span {
+  font-weight: 600;
+}
+
+.search-results {
+  margin-top: 3rem;
+}
+
+.results-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.search-empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.search-empty-state p {
+  font-size: 1.3rem;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 2rem;
+  }
+
+  .search-input-wrapper {
+    flex-direction: column;
+  }
+
+  .search-btn {
+    padding: 1rem;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .results-title {
+    font-size: 1.4rem;
+  }
+}
