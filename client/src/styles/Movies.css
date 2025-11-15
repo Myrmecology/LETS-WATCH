@@ -1,0 +1,18 @@
+.movies-page {
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+.movies-content {
+  padding: 2rem 0;
+  background-color: #141414;
+}
+
+/* Additional spacing for movie rows */
+.movies-content .movie-row:first-child {
+  margin-top: 0;
+}
+
+.movies-content .movie-row:last-child {
+  margin-bottom: 3rem;
+}
