@@ -1,5 +1,7 @@
 # LETS WATCH
 
+FOR A VIDEO DEMO OF THIS PROJECT, PLEASE VISIT: https://www.youtube.com/watch?v=4ryHV9Me5HE
+
 A modern movie streaming platform built with the MERN stack, featuring user authentication, favorites management, and TMDB API integration.
 
 ## Tech Stack
@@ -71,6 +73,3 @@ lets-watch/
 └── package.json     # Root package with concurrent scripts
 ```
 
-## License
-
-MIT
